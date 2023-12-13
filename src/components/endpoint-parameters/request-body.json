@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_endpoint_parameters_request_bodies",
+  "info": {
+    "displayName": "RequestBody",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "parameters": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::parameter.parameter"
+    }
+  }
+}
