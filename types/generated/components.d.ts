@@ -12,47 +12,45 @@ export interface AdmonitionAdmonition extends Schema.Component {
   };
 }
 
-export interface EndpointParametersBodyParameters extends Schema.Component {
-  collectionName: 'components_endpoint_parameters_body_parameters';
+export interface EndpointParametersRequestBody extends Schema.Component {
+  collectionName: 'components_endpoint_parameters_request_bodies';
   info: {
-    displayName: 'Body parameters';
+    displayName: 'RequestBody';
     icon: 'bulletList';
-    description: '';
   };
   attributes: {
     parameters: Attribute.Relation<
-      'endpoint-parameters.body-parameters',
+      'endpoint-parameters.request-body',
       'oneToMany',
       'api::parameter.parameter'
     >;
   };
 }
 
-export interface EndpointParametersPathParameters extends Schema.Component {
-  collectionName: 'components_endpoint_parameters_path_parameters';
+export interface EndpointParametersRequestPath extends Schema.Component {
+  collectionName: 'components_endpoint_parameters_request_paths';
   info: {
-    displayName: 'Path parameters';
+    displayName: 'RequestPath';
     icon: 'bulletList';
-    description: '';
   };
   attributes: {
     parameters: Attribute.Relation<
-      'endpoint-parameters.path-parameters',
+      'endpoint-parameters.request-path',
       'oneToMany',
       'api::parameter.parameter'
     >;
   };
 }
 
-export interface EndpointParametersQueryParameters extends Schema.Component {
-  collectionName: 'components_endpoint_parameters_query_parameters';
+export interface EndpointParametersRequestQuery extends Schema.Component {
+  collectionName: 'components_endpoint_parameters_request_queries';
   info: {
-    displayName: 'Query parameters';
+    displayName: 'RequestQuery';
     icon: 'bulletList';
   };
   attributes: {
     parameters: Attribute.Relation<
-      'endpoint-parameters.query-parameters',
+      'endpoint-parameters.request-query',
       'oneToMany',
       'api::parameter.parameter'
     >;
@@ -96,9 +94,9 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'admonition.admonition': AdmonitionAdmonition;
-      'endpoint-parameters.body-parameters': EndpointParametersBodyParameters;
-      'endpoint-parameters.path-parameters': EndpointParametersPathParameters;
-      'endpoint-parameters.query-parameters': EndpointParametersQueryParameters;
+      'endpoint-parameters.request-body': EndpointParametersRequestBody;
+      'endpoint-parameters.request-path': EndpointParametersRequestPath;
+      'endpoint-parameters.request-query': EndpointParametersRequestQuery;
       'endpoint-sdk-methods.sdk-methods': EndpointSdkMethodsSdkMethods;
       'httpresponse-parameters.http-response-parameters': HttpresponseParametersHttpResponseParameters;
     }

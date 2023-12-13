@@ -693,7 +693,7 @@ export interface ApiEndpointEndpoint extends Schema.CollectionType {
     isObject: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<false>;
-    Title: Attribute.String;
+    title: Attribute.String;
     method: Attribute.Enumeration<['GET', 'POST', 'PUT']> &
       Attribute.Required &
       Attribute.DefaultTo<'GET'>;
@@ -702,18 +702,19 @@ export interface ApiEndpointEndpoint extends Schema.CollectionType {
       Attribute.Required &
       Attribute.DefaultTo<false>;
     bodyParameters: Attribute.Component<
-      'endpoint-parameters.body-parameters',
-      true
-    >;
-    queryParameters: Attribute.Component<
-      'endpoint-parameters.query-parameters',
+      'endpoint-parameters.request-body',
       true
     >;
     pathParameters: Attribute.Component<
-      'endpoint-parameters.path-parameters',
+      'endpoint-parameters.request-path',
+      true
+    >;
+    queryParameters: Attribute.Component<
+      'endpoint-parameters.request-query',
       true
     >;
     sdkMethods: Attribute.Component<'endpoint-sdk-methods.sdk-methods', true>;
+    sliceZone: Attribute.DynamicZone<['admonition.admonition']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

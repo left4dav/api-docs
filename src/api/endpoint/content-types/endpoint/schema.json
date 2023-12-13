@@ -21,7 +21,7 @@
       "default": false,
       "required": true
     },
-    "Title": {
+    "title": {
       "type": "string"
     },
     "method": {
@@ -44,25 +44,30 @@
       "required": true
     },
     "bodyParameters": {
-      "displayName": "bodyParameters",
       "type": "component",
       "repeatable": true,
-      "component": "endpoint-parameters.body-parameters"
-    },
-    "queryParameters": {
-      "type": "component",
-      "repeatable": true,
-      "component": "endpoint-parameters.query-parameters"
+      "component": "endpoint-parameters.request-body"
     },
     "pathParameters": {
       "type": "component",
       "repeatable": true,
-      "component": "endpoint-parameters.path-parameters"
+      "component": "endpoint-parameters.request-path"
+    },
+    "queryParameters": {
+      "type": "component",
+      "repeatable": true,
+      "component": "endpoint-parameters.request-query"
     },
     "sdkMethods": {
       "type": "component",
       "repeatable": true,
       "component": "endpoint-sdk-methods.sdk-methods"
+    },
+    "sliceZone": {
+      "type": "dynamiczone",
+      "components": [
+        "admonition.admonition"
+      ]
     }
   }
 }
