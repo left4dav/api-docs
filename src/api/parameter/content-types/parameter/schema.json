@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "parameters",
+  "info": {
+    "singularName": "parameter",
+    "pluralName": "parameters",
+    "displayName": "Parameter",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "usage": {
+      "type": "enumeration",
+      "enum": [
+        "optional",
+        "required",
+        "required if",
+        "deprecated"
+      ],
+      "default": "required",
+      "required": true
+    },
+    "usageDescription": {
+      "type": "blocks",
+      "required": false
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "string",
+        "array",
+        "object",
+        "timestamp",
+        "integer",
+        "float",
+        "boolean"
+      ],
+      "required": true,
+      "default": "string"
+    },
+    "defaultValues": {
+      "type": "blocks"
+    },
+    "allowedValues": {
+      "type": "blocks"
+    },
+    "returnValues": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "blocks",
+      "required": false
+    },
+    "subparameter": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::parameter.parameter",
+      "inversedBy": "subparameters"
+    },
+    "subparameters": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::parameter.parameter",
+      "mappedBy": "subparameter"
+    },
+    "parameterRules": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::parameter-rule.parameter-rule",
+      "mappedBy": "rule"
+    }
+  }
+}

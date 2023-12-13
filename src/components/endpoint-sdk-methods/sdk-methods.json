@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_endpoint_sdk_methods_sdk_methods",
+  "info": {
+    "displayName": "SDK methods",
+    "icon": "code",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sdk_methods": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sdk-method.sdk-method"
+    }
+  }
+}

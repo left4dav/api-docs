@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_endpoint_parameters_path_parameters",
+  "info": {
+    "displayName": "Path parameters",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "parameters": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::parameter.parameter"
+    }
+  }
+}

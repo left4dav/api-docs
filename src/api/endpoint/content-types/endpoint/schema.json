@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "endpoints",
+  "info": {
+    "singularName": "endpoint",
+    "pluralName": "endpoints",
+    "displayName": "Endpoint",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uid": {
+      "type": "uid",
+      "required": true
+    },
+    "isObject": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "Title": {
+      "type": "string"
+    },
+    "method": {
+      "type": "enumeration",
+      "enum": [
+        "GET",
+        "POST",
+        "PUT"
+      ],
+      "required": true,
+      "default": "GET"
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "allParamertersAreOptional": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "bodyParameters": {
+      "displayName": "bodyParameters",
+      "type": "component",
+      "repeatable": true,
+      "component": "endpoint-parameters.body-parameters"
+    },
+    "queryParameters": {
+      "type": "component",
+      "repeatable": true,
+      "component": "endpoint-parameters.query-parameters"
+    },
+    "pathParameters": {
+      "type": "component",
+      "repeatable": true,
+      "component": "endpoint-parameters.path-parameters"
+    },
+    "sdkMethods": {
+      "type": "component",
+      "repeatable": true,
+      "component": "endpoint-sdk-methods.sdk-methods"
+    }
+  }
+}

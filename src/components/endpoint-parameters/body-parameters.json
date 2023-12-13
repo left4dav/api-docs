@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_endpoint_parameters_body_parameters",
+  "info": {
+    "displayName": "Body parameters",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "parameters": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::parameter.parameter"
+    }
+  }
+}

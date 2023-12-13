@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_httpresponse_parameters_http_response_parameters",
+  "info": {
+    "displayName": "HttpResponse Parameters",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "parameters": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::parameter.parameter"
+    }
+  }
+}

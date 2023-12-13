@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_endpoint_parameters_query_parameters",
+  "info": {
+    "displayName": "Query parameters",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "parameters": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::parameter.parameter"
+    }
+  }
+}

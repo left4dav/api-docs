@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_admonition_admonitions",
+  "info": {
+    "displayName": "Admonition",
+    "icon": "check"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "Icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
