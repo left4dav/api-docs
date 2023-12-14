@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "endpoints",
+  "info": {
+    "singularName": "endpoint",
+    "pluralName": "endpoints",
+    "displayName": "Endpoint",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uid": {
+      "type": "uid",
+      "required": true
+    },
+    "isObject": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "method": {
+      "type": "enumeration",
+      "enum": [
+        "GET",
+        "POST",
+        "PUT"
+      ],
+      "required": true,
+      "default": "GET"
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "allParamsAreOptional": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "attributes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "objattrs.attributes"
+    },
+    "bodyParameters": {
+      "type": "component",
+      "repeatable": true,
+      "component": "reqparams.body"
+    },
+    "pathParameters": {
+      "type": "component",
+      "repeatable": true,
+      "component": "reqparams.query"
+    },
+    "queryParameters": {
+      "type": "component",
+      "repeatable": true,
+      "component": "reqparams.query"
+    },
+    "sdkMethods": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sdkmets.sdkmets"
+    },
+    "sliceZone": {
+      "type": "dynamiczone",
+      "components": [
+        "admonition.admonition",
+        "httpresp.http-resp"
+      ]
+    }
+
+  }
+}

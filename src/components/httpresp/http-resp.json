@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_httpresp_http_resps",
+  "info": {
+    "displayName": "HttpResp",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "http_resps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::http-response.http-response"
+    }
+  }
+}

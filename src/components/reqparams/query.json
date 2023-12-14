@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_reqparams_queries",
+  "info": {
+    "displayName": "query",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "params": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::parameter.parameter"
+    }
+  }
+}
