@@ -1,12 +1,12 @@
 {
-  "collectionName": "components_endpoint_parameters_request_paths",
+  "collectionName": "components_reqparams_queries",
   "info": {
-    "displayName": "RequestPath",
+    "displayName": "query",
     "icon": "bulletList"
   },
   "options": {},
   "attributes": {
-    "parameters": {
+    "params": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::parameter.parameter"

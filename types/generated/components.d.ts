@@ -12,80 +12,77 @@ export interface AdmonitionAdmonition extends Schema.Component {
   };
 }
 
-export interface EndpointParametersRequestBody extends Schema.Component {
-  collectionName: 'components_endpoint_parameters_request_bodies';
+export interface HttprespHttpResp extends Schema.Component {
+  collectionName: 'components_httpresp_http_resps';
   info: {
-    displayName: 'RequestBody';
+    displayName: 'HttpResp';
     icon: 'bulletList';
   };
   attributes: {
-    parameters: Attribute.Relation<
-      'endpoint-parameters.request-body',
+    http_resps: Attribute.Relation<
+      'httpresp.http-resp',
+      'oneToMany',
+      'api::http-response.http-response'
+    >;
+  };
+}
+
+export interface ReqparamsBody extends Schema.Component {
+  collectionName: 'components_reqparams_bodies';
+  info: {
+    displayName: 'body';
+    icon: 'bulletList';
+  };
+  attributes: {
+    params: Attribute.Relation<
+      'reqparams.body',
       'oneToMany',
       'api::parameter.parameter'
     >;
   };
 }
 
-export interface EndpointParametersRequestPath extends Schema.Component {
-  collectionName: 'components_endpoint_parameters_request_paths';
+export interface ReqparamsPath extends Schema.Component {
+  collectionName: 'components_reqparams_paths';
   info: {
-    displayName: 'RequestPath';
+    displayName: 'path';
     icon: 'bulletList';
   };
   attributes: {
-    parameters: Attribute.Relation<
-      'endpoint-parameters.request-path',
+    params: Attribute.Relation<
+      'reqparams.path',
       'oneToMany',
       'api::parameter.parameter'
     >;
   };
 }
 
-export interface EndpointParametersRequestQuery extends Schema.Component {
-  collectionName: 'components_endpoint_parameters_request_queries';
+export interface ReqparamsQuery extends Schema.Component {
+  collectionName: 'components_reqparams_queries';
   info: {
-    displayName: 'RequestQuery';
+    displayName: 'query';
     icon: 'bulletList';
   };
   attributes: {
-    parameters: Attribute.Relation<
-      'endpoint-parameters.request-query',
+    params: Attribute.Relation<
+      'reqparams.query',
       'oneToMany',
       'api::parameter.parameter'
     >;
   };
 }
 
-export interface EndpointSdkMethodsSdkMethods extends Schema.Component {
-  collectionName: 'components_endpoint_sdk_methods_sdk_methods';
+export interface SdkmetsSdkmets extends Schema.Component {
+  collectionName: 'components_sdkmets_sdkmets';
   info: {
-    displayName: 'SDK methods';
-    icon: 'code';
-    description: '';
+    displayName: 'sdkmets';
+    icon: 'bulletList';
   };
   attributes: {
-    sdk_methods: Attribute.Relation<
-      'endpoint-sdk-methods.sdk-methods',
+    sdk_mets: Attribute.Relation<
+      'sdkmets.sdkmets',
       'oneToMany',
       'api::sdk-method.sdk-method'
-    >;
-  };
-}
-
-export interface HttpresponseParametersHttpResponseParameters
-  extends Schema.Component {
-  collectionName: 'components_httpresponse_parameters_http_response_parameters';
-  info: {
-    displayName: 'HttpResponse Parameters';
-    icon: 'bulletList';
-    description: '';
-  };
-  attributes: {
-    parameters: Attribute.Relation<
-      'httpresponse-parameters.http-response-parameters',
-      'oneToMany',
-      'api::parameter.parameter'
     >;
   };
 }
@@ -94,11 +91,11 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'admonition.admonition': AdmonitionAdmonition;
-      'endpoint-parameters.request-body': EndpointParametersRequestBody;
-      'endpoint-parameters.request-path': EndpointParametersRequestPath;
-      'endpoint-parameters.request-query': EndpointParametersRequestQuery;
-      'endpoint-sdk-methods.sdk-methods': EndpointSdkMethodsSdkMethods;
-      'httpresponse-parameters.http-response-parameters': HttpresponseParametersHttpResponseParameters;
+      'httpresp.http-resp': HttprespHttpResp;
+      'reqparams.body': ReqparamsBody;
+      'reqparams.path': ReqparamsPath;
+      'reqparams.query': ReqparamsQuery;
+      'sdkmets.sdkmets': SdkmetsSdkmets;
     }
   }
 }

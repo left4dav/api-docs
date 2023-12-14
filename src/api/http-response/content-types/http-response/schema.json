@@ -33,9 +33,7 @@
     },
     "parameters": {
       "type": "dynamiczone",
-      "components": [
-        "httpresponse-parameters.http-response-parameters"
-      ]
+      "components": []
     }
   }
 }

@@ -46,27 +46,28 @@
     "bodyParameters": {
       "type": "component",
       "repeatable": true,
-      "component": "endpoint-parameters.request-body"
+      "component": "reqparams.body"
     },
     "pathParameters": {
       "type": "component",
       "repeatable": true,
-      "component": "endpoint-parameters.request-path"
+      "component": "reqparams.query"
     },
     "queryParameters": {
       "type": "component",
       "repeatable": true,
-      "component": "endpoint-parameters.request-query"
+      "component": "reqparams.query"
     },
     "sdkMethods": {
       "type": "component",
       "repeatable": true,
-      "component": "endpoint-sdk-methods.sdk-methods"
+      "component": "sdkmets.sdkmets"
     },
     "sliceZone": {
       "type": "dynamiczone",
       "components": [
-        "admonition.admonition"
+        "admonition.admonition",
+        "httpresp.http-resp"
       ]
     }
   }

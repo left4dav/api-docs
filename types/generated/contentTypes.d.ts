@@ -701,20 +701,13 @@ export interface ApiEndpointEndpoint extends Schema.CollectionType {
     allParamertersAreOptional: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<false>;
-    bodyParameters: Attribute.Component<
-      'endpoint-parameters.request-body',
-      true
+    bodyParameters: Attribute.Component<'reqparams.body', true>;
+    pathParameters: Attribute.Component<'reqparams.query', true>;
+    queryParameters: Attribute.Component<'reqparams.query', true>;
+    sdkMethods: Attribute.Component<'sdkmets.sdkmets', true>;
+    sliceZone: Attribute.DynamicZone<
+      ['admonition.admonition', 'httpresp.http-resp']
     >;
-    pathParameters: Attribute.Component<
-      'endpoint-parameters.request-path',
-      true
-    >;
-    queryParameters: Attribute.Component<
-      'endpoint-parameters.request-query',
-      true
-    >;
-    sdkMethods: Attribute.Component<'endpoint-sdk-methods.sdk-methods', true>;
-    sliceZone: Attribute.DynamicZone<['admonition.admonition']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -751,9 +744,7 @@ export interface ApiHttpResponseHttpResponse extends Schema.CollectionType {
       Attribute.DefaultTo<'Green'>;
     code: Attribute.Blocks;
     example: Attribute.Text;
-    parameters: Attribute.DynamicZone<
-      ['httpresponse-parameters.http-response-parameters']
-    >;
+    parameters: Attribute.DynamicZone<[]>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
