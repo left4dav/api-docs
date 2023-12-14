@@ -27,6 +27,37 @@ export interface HttprespHttpResp extends Schema.Component {
   };
 }
 
+export interface ObjattrsAttributes extends Schema.Component {
+  collectionName: 'components_objattrs_attributes';
+  info: {
+    displayName: 'attrs';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    attrs: Attribute.Relation<
+      'objattrs.attributes',
+      'oneToMany',
+      'api::parameter.parameter'
+    >;
+  };
+}
+
+export interface ParamrulesParamRules extends Schema.Component {
+  collectionName: 'components_paramrules_param_rules';
+  info: {
+    displayName: 'paramRules';
+    icon: 'bulletList';
+  };
+  attributes: {
+    paramrules: Attribute.Relation<
+      'paramrules.param-rules',
+      'oneToMany',
+      'api::parameter-rule.parameter-rule'
+    >;
+  };
+}
+
 export interface ReqparamsBody extends Schema.Component {
   collectionName: 'components_reqparams_bodies';
   info: {
@@ -92,6 +123,8 @@ declare module '@strapi/types' {
     export interface Components {
       'admonition.admonition': AdmonitionAdmonition;
       'httpresp.http-resp': HttprespHttpResp;
+      'objattrs.attributes': ObjattrsAttributes;
+      'paramrules.param-rules': ParamrulesParamRules;
       'reqparams.body': ReqparamsBody;
       'reqparams.path': ReqparamsPath;
       'reqparams.query': ReqparamsQuery;

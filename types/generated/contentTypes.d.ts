@@ -698,9 +698,10 @@ export interface ApiEndpointEndpoint extends Schema.CollectionType {
       Attribute.Required &
       Attribute.DefaultTo<'GET'>;
     url: Attribute.String & Attribute.Required;
-    allParamertersAreOptional: Attribute.Boolean &
+    allParamsAreOptional: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<false>;
+    attributes: Attribute.Component<'objattrs.attributes', true>;
     bodyParameters: Attribute.Component<'reqparams.body', true>;
     pathParameters: Attribute.Component<'reqparams.query', true>;
     queryParameters: Attribute.Component<'reqparams.query', true>;
@@ -787,6 +788,7 @@ export interface ApiParameterParameter extends Schema.CollectionType {
     > &
       Attribute.Required &
       Attribute.DefaultTo<'string'>;
+    rules: Attribute.Component<'paramrules.param-rules', true>;
     defaultValues: Attribute.Blocks;
     allowedValues: Attribute.Blocks;
     returnValues: Attribute.Blocks;

@@ -38,10 +38,15 @@
       "type": "string",
       "required": true
     },
-    "allParamertersAreOptional": {
+    "allParamsAreOptional": {
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "attributes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "objattrs.attributes"
     },
     "bodyParameters": {
       "type": "component",
@@ -70,5 +75,6 @@
         "httpresp.http-resp"
       ]
     }
+
   }
 }

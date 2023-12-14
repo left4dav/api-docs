@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_objattrs_attributes",
+  "info": {
+    "displayName": "attrs",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "attrs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::parameter.parameter"
+    }
+  }
+}

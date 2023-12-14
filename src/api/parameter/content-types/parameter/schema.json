@@ -46,6 +46,11 @@
       "required": true,
       "default": "string"
     },
+    "rules": {
+      "type": "component",
+      "repeatable": true,
+      "component": "paramrules.param-rules"
+    },
     "defaultValues": {
       "type": "blocks"
     },

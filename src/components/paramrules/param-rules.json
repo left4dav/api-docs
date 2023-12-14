@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_paramrules_param_rules",
+  "info": {
+    "displayName": "paramRules",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "paramrules": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::parameter-rule.parameter-rule"
+    }
+  }
+}
