@@ -26,7 +26,18 @@
       "required": true
     },
     "code": {
-      "type": "blocks"
+      "type": "enumeration",
+      "enum": [
+        "200",
+        "202",
+        "302",
+        "400",
+        "401",
+        "403",
+        "404",
+        "500",
+        "503"
+      ]
     },
     "example": {
       "type": "text"
